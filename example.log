@@ -1,0 +1,51 @@
+ __      __         _ _     _  __              _                   _    _           _       _
+ \ \    / /        | | |   | |/ /             | |                 | |  | |         | |     | |
+  \ \  / __ _ _   _| | |_  | ' / ___ _   _ ___| |_ ___  _ __ ___  | |  | |_ __   __| | __ _| |_ ___
+   \ \/ / _` | | | | | __| |  < / _ | | | / __| __/ _ \| '__/ _ \ | |  | | '_ \ / _` |/ _` | __/ _ \
+    \  | (_| | |_| | | |_  | . |  __| |_| \__ | || (_) | | |  __/ | |__| | |_) | (_| | (_| | ||  __/
+     \/ \__,_|\__,_|_|\__| |_|\_\___|\__, |___/\__\___/|_|  \___|  \____/| .__/ \__,_|\__,_|\__\___|
+                                      __/ |                              | |
+                                     |___/                               |_|
+
+2024-02-21T19:33:10.775Z Variables imported
+2024-02-21T19:33:10.776Z Parameters verified
+2024-02-21T19:33:15.587Z New Keystore DB created /usr/share/logstash/config/logstash.keystore
+2024-02-21T19:33:15.617Z Vault login successful
+2024-02-21T19:33:15.641Z Vault secret data fetched
+2024-02-21T19:33:20.645Z Key example_key_1_standard not found in Keystore DB
+2024-02-21T19:33:26.235Z Key example_key_1_standard added to Keystore DB with hashed value SHA256 9bc37b502ed71b30629308911ff1597abe139f87dbcc655c4485fbb182e38aee
+2024-02-21T19:33:31.105Z Key example_key_1_strong not found in Keystore DB
+2024-02-21T19:33:36.034Z Key example_key_1_strong added to Keystore DB with hashed value SHA256 078c4ed7561c58ff5e9b8bec061d3614f736419bcda2b4ec957446d7c7b548dc
+2024-02-21T19:33:41.844Z Key example_key_1_weak not found in Keystore DB
+2024-02-21T19:33:47.306Z Key example_key_1_weak added to Keystore DB with hashed value SHA256 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+2024-02-21T19:33:53.161Z Key example_key_2_standard not found in Keystore DB
+2024-02-21T19:33:58.716Z Key example_key_2_standard added to Keystore DB with hashed value SHA256 d600474b1b8e50d3633c91c0cf1efc454b79c9624a43fd7de441ee71745726ab
+2024-02-21T19:34:04.505Z Key example_key_2_strong not found in Keystore DB
+2024-02-21T19:34:10.578Z Key example_key_2_strong added to Keystore DB with hashed value SHA256 d600474b1b8e50d3633c91c0cf1efc454b79c9624a43fd7de441ee71745726ab
+2024-02-21T19:34:15.427Z Key example_key_2_weak not found in Keystore DB
+2024-02-21T19:34:21.084Z Key example_key_2_weak added to Keystore DB with hashed value SHA256 3ebff31b62c0637c54d4ffa990d5c100ea359994b35f4b342ff49797542148cd
+2024-02-21T19:34:26.864Z Key example_key_3_standard not found in Keystore DB
+2024-02-21T19:34:32.694Z Key example_key_3_standard added to Keystore DB with hashed value SHA256 0a77f9e40c92392f3830dfc51e0287cdd241102788ea1636e334ec0748c6477b
+2024-02-21T19:34:38.540Z Key example_key_3_strong not found in Keystore DB
+2024-02-21T19:34:44.180Z Key example_key_3_strong added to Keystore DB with hashed value SHA256 e887cb9759fdbd24d9e9890d0d130b0003e21dfbd7f875cb6f181e1fe17a1697
+2024-02-21T19:34:49.206Z Key example_key_3_weak not found in Keystore DB
+2024-02-21T19:34:55.323Z Key example_key_3_weak added to Keystore DB with hashed value SHA256 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+2024-02-21T19:35:01.575Z Key example_key_4_standard not found in Keystore DB
+2024-02-21T19:35:06.893Z Key example_key_4_standard added to Keystore DB with hashed value SHA256 9899f1fec6613468ccb72b9a4d6ac3fa89715ea0aa026487fb99c41ce959b3de
+2024-02-21T19:35:12.606Z Key example_key_4_strong not found in Keystore DB
+2024-02-21T19:35:18.163Z Key example_key_4_strong added to Keystore DB with hashed value SHA256 9899f1fec6613468ccb72b9a4d6ac3fa89715ea0aa026487fb99c41ce959b3de
+2024-02-21T19:35:23.503Z Key example_key_4_weak not found in Keystore DB
+2024-02-21T19:35:23.504Z Skipping empty value for key example_key_4_weak
+2024-02-21T19:35:29.162Z Key example_key_5_standard not found in Keystore DB
+2024-02-21T19:35:34.552Z Key example_key_5_standard added to Keystore DB with hashed value SHA256 43e3c05a638c716ac91b0d92ca7b5a09d207efdc72dbf1a6384decc1afe59f1c
+2024-02-21T19:35:40.229Z Key example_key_5_strong not found in Keystore DB
+2024-02-21T19:35:45.685Z Key example_key_5_strong added to Keystore DB with hashed value SHA256 43e3c05a638c716ac91b0d92ca7b5a09d207efdc72dbf1a6384decc1afe59f1c
+2024-02-21T19:35:51.004Z Key example_key_5_weak not found in Keystore DB
+2024-02-21T19:35:56.650Z Key example_key_5_weak added to Keystore DB with hashed value SHA256 c2a5fba9e6140df7a699f19e7515ee6f8ae94cceff9db509267b2aa40c086b67
+2024-02-21T19:36:02.491Z Key example_key_6_standard not found in Keystore DB
+2024-02-21T19:36:08.070Z Key example_key_6_standard added to Keystore DB with hashed value SHA256 c2c843e59343c3b5ef434b449d256d7267d557d73814d8feb5cc67ca0bd972de
+2024-02-21T19:36:13.715Z Key example_key_6_strong not found in Keystore DB
+2024-02-21T19:36:19.456Z Key example_key_6_strong added to Keystore DB with hashed value SHA256 052f31e4a6eda5bfbb500326c7e2d14f3ed7cb0bbaf0524f3e36393930c602d0
+2024-02-21T19:36:24.881Z Key example_key_6_weak not found in Keystore DB
+2024-02-21T19:36:30.271Z Key example_key_6_weak added to Keystore DB with hashed value SHA256 04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb
+2024-02-21T19:36:30.272Z Completed!
