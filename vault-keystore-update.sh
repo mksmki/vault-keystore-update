@@ -49,6 +49,21 @@ function import_variables() {
     log_success "Variables imported"
 }
 
+function read_secret_prompt() {
+    local secret=""
+    local prompt="$1"
+
+    while IFS= read -p "$prompt" -r -s -n 1 char; do
+        if [[ "$char" == $'\0' ]]; then
+            break
+        fi
+
+        secret="${secret}${char}"
+        prompt="*"
+    done
+    echo -n "${secret}"
+}
+
 function run_checks() {
     [[ -x ${JQ} ]] || {
         log_error "Error: jq is not found or not executable"
@@ -60,21 +75,33 @@ function run_checks() {
         exit 1
     }
 
-    [[ -n "${ROLE_ID}" ]] || {
-        log_error "Error: ROLE_ID is not set or empty!"
-        exit 1
-    }
+    if [[ -z "${ROLE_ID}" ]]; then
+        log_warn "Application role_id for Vault authorization is not defined"
+        ROLE_ID=$(read_secret_prompt "Enter ROLE_ID: ")
+        echo ""
 
-    [[ -n "${SECRET_ID}" ]] || {
-        log_error "Error: SECRET_ID is not set or empty!"
-        exit 1
-    }
+        [[ -n "${ROLE_ID}" ]] || {
+            log_error "Error: ROLE_ID is not set or empty!"
+            exit 1
+        }
+    fi
+
+    if [[ -z "${SECRET_ID}" ]]; then
+        log_warn "Application secret_id for Vault authorization is not defined"
+        SECRET_ID=$(read_secret_prompt "Enter SECRET_ID: ")
+        echo ""
+
+        [[ -n "${SECRET_ID}" ]] || {
+            log_error "Error: SECRET_ID is not set or empty!"
+            exit 1
+        }
+    fi
 
     log_success "Parameters verified"
 }
 
 function get_vault_token() {
-    VAULT_TOKEN=$(curl ${CURL_INSECURE} \
+    VAULT_TOKEN=$(curl ${CURL_INSECURE:-} \
         --silent \
         --request PUT \
         --header "X-Vault-Request: true" \
@@ -92,7 +119,7 @@ function get_vault_token() {
 }
 
 function get_secret_data() {
-    VAULT_DATA=$(curl ${CURL_INSECURE} \
+    VAULT_DATA=$(curl ${CURL_INSECURE:-} \
         --silent \
         --request GET \
         --header "X-Vault-Request: true" \
